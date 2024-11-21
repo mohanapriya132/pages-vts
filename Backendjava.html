@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <nav class="flex items-center text-center justify-between p-1 m-1 sticky top-0 z-30 bg-white w-full pl-10 pr-10">
+        <div>
+           <a href="index.html"> <img src="images/logo.jpg" alt="logo" class="w-50 h-20"></a>
+        </div>
+        <div class=" navbar flex gap-10 items-center text-center  text-gray-600 font-medium">
+            <!-- <a href="#"><i class="fa-solid fa-house-chimney"></i>HOME</a> -->
+            <a href="#"><i class="fa-solid fa-circle-question"></i>VTS PROCESS</a>
+                  <!-- OUR PROJECTS with Multi-Level Dropdown -->
+                  <div class="relative">
+                    <a href="#" onclick="toggleDropdown('projectDropdown')" class="flex items-center gap-2">
+                      <i class="fa-solid fa-list-check"></i> OUR TRAININGS
+                    </a>
+                    
+                    <!-- First Level Dropdown for "OUR PROJECTS" -->
+                    <div id="projectDropdown" class="hidden absolute bg-white text-gray-600 mt-2 p-2 rounded shadow-lg w-[20rem]">
+                      <a href="frontendfront.html" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">Frontend Developer</a>
+                      <a href="Backendpython.html" onclick="toggleDropdown('digitalServiceDropdown')" class="block px-4 py-2 hover:bg-gray-100">Backend Developer(python)</a>
+                      <a href="#" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">Backend Developer(Node.js)</a>
+                      <a href="#" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">Backend Developer(Java)</a>
+                      <a href="#" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">MERN Stack Developer</a>
+                    </div>
+                  </div> 
+             <a href="#"><i class="fa-solid fa-people-group"></i>CAREERS</a>
+           
+        <div>
+            <button class=" bg-yellow-400 p-2 m-2 pl-4 pr-4 rounded-sm"><i class="fa-solid fa-phone"></i>+91-8438558527</button>
+        </div>
+       </nav>
+
+       <div class="relative">
+        <img src="images/front-end.jpg" alt="banner" class="w-full" style="height: 26rem;">
+        </div>
+        <nav class="bg-white border-b border-gray-200 shadow-md">
+            <div class="container mx-auto px-6 py-3 flex justify-center mt-3 items-center ">
+              <!-- Navbar Links -->
+              <div class="flex space-x-8">
+                <a href="#about" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300 hover:scale-105">
+                  About
+                </a>
+                <a href="#skills" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300 hover:scale-105">
+                  Skill You Learn
+                </a>
+                <a href="#modules" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300 hover:scale-105">
+                  Technical Modules
+                </a>
+                <a href="#features" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300 hover:scale-105">
+                  Key Features
+                </a>
+                <a href="#certification" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300 hover:scale-105">
+                  Certification
+                </a>
+              </div>
+            </div>
+          </nav>
+
+          <div class="bg-gray-50 py-12 ">
+            <div class="max-w-7xl mx-auto px-6">
+              <!-- Header Section -->
+              <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-800">Backend Java Development Training</h1>
+                <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+                  Master the essential backend Java skills to build enterprise-level applications with robust, scalable, and secure architecture.
+                </p>
+              </div>
+          
+              <!-- Content Section -->
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Overview Section -->
+                <div class="bg-white shadow-md rounded-lg p-8 border border-gray-200">
+                  <h2 class="text-2xl font-semibold text-gray-800 mb-4">Overview</h2>
+                  <p class="text-gray-700 leading-relaxed mb-4">
+                    Backend Java development is the backbone of modern applications. This training program equips you with in-depth 
+                    knowledge of Java programming, Spring Boot framework, database handling, and RESTful APIs to help you build scalable 
+                    and secure backend systems.
+                  </p>
+                  <p class="text-gray-700 leading-relaxed mb-4">
+                    With hands-on experience in building microservices and deploying them on the cloud, this course offers a comprehensive 
+                    approach to mastering backend development.
+                  </p>
+                  <p class="text-gray-700 leading-relaxed mb-4">
+                    Learn how to create well-architected systems that are designed to handle high traffic and data-intensive workloads, 
+                    making you a standout candidate in the industry.
+                  </p>
+                  <p class="text-gray-700 leading-relaxed">
+                    Whether you're a beginner or an intermediate developer, this course will empower you to take your backend 
+                    development skills to the next level with real-world projects and industry-best practices.
+                  </p>
+                </div>
+          
+                <!-- Animation & Visual Section -->
+                <div class="relative mt-24">
+                  <!-- Floating Animation Box -->
+                  <div class="relative bg-blue-500 text-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition duration-300">
+                    <h3 class="text-2xl font-bold mb-4">Why Choose This Training?</h3>
+                    <ul class="space-y-3">
+                      <li class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-green-300"></i> Hands-on Projects with Real-World Scenarios
+                      </li>
+                      <li class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-green-300"></i> Industry-Relevant Curriculum
+                      </li>
+                      <li class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-green-300"></i> Guidance from Expert Trainers
+                      </li>
+                      <li class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-green-300"></i> Cloud Deployment Training
+                      </li>
+                    </ul>
+                  </div>
+          
+                  <!-- Background Animation -->
+                  <div class="absolute top-12 -right-12 h-48 w-48 bg-blue-200 rounded-full opacity-40 blur-2xl animate-pulse"></div>
+                  <div class="absolute -bottom-12 -left-12 h-40 w-40 bg-blue-300 rounded-full opacity-30 blur-2xl animate-bounce"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="bg-gradient-to-b from-blue-50 to-white py-12">
+            <div class="max-w-6xl mx-auto px-6">
+              <!-- Header Section -->
+              <header class="text-center mb-10">
+                <h1 class="text-4xl font-bold text-gray-800">Backend Java Development Skills</h1>
+                <p class="text-gray-600 mt-4">
+                  Learn the core backend skills to build secure, scalable, and high-performance enterprise-level applications.
+                </p>
+              </header>
+          
+              <!-- Skills Grid Section -->
+              <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill Card -->
+                <div class="bg-white shadow-lg rounded-lg p-6 group relative overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-br from-blue-100 to-blue-300 opacity-50 group-hover:opacity-70 transition-all duration-500"></div>
+                  <div class="relative z-10">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Java Fundamentals</h3>
+                    <p class="text-gray-600 text-sm">
+                      Master core Java concepts like OOP, exception handling, and collections.
+                    </p>
+                  </div>
+                  <img src="https://img.icons8.com/color/48/java-coffee-cup-logo.png" alt="Java Icon" class="absolute -top-6 -right-6 w-24 h-24 opacity-10 group-hover:opacity-30 transform rotate-45 transition duration-500">
+                </div>
+          
+                <!-- Skill Card -->
+                <div class="bg-white shadow-lg rounded-lg p-6 group relative overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-purple-300 opacity-50 group-hover:opacity-70 transition-all duration-500"></div>
+                  <div class="relative z-10">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Spring Boot</h3>
+                    <p class="text-gray-600 text-sm">
+                      Build enterprise-grade applications with the Spring Boot framework.
+                    </p>
+                  </div>
+                  <img src="https://img.icons8.com/color/48/spring-logo.png" alt="Spring Boot Icon" class="absolute -top-6 -right-6 w-24 h-24 opacity-10 group-hover:opacity-30 transform rotate-45 transition duration-500">
+                </div>
+          
+                <!-- Skill Card -->
+                <div class="bg-white shadow-lg rounded-lg p-6 group relative overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-br from-green-100 to-green-300 opacity-50 group-hover:opacity-70 transition-all duration-500"></div>
+                  <div class="relative z-10">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">RESTful APIs</h3>
+                    <p class="text-gray-600 text-sm">
+                      Design and implement RESTful web services with ease.
+                    </p>
+                  </div>
+                  <img src="https://img.icons8.com/color/48/api.png" alt="API Icon" class="absolute -top-6 -right-6 w-24 h-24 opacity-10 group-hover:opacity-30 transform rotate-45 transition duration-500">
+                </div>
+          
+                <!-- Skill Card -->
+                <div class="bg-white shadow-lg rounded-lg p-6 group relative overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-300 opacity-50 group-hover:opacity-70 transition-all duration-500"></div>
+                  <div class="relative z-10">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Microservices</h3>
+                    <p class="text-gray-600 text-sm">
+                      Learn to build, deploy, and manage scalable microservices architecture.
+                    </p>
+                  </div>
+                  <img src="https://img.icons8.com/color/48/microservices.png" alt="Microservices Icon" class="absolute -top-6 -right-6 w-24 h-24 opacity-10 group-hover:opacity-30 transform rotate-45 transition duration-500">
+                </div>
+          
+                <!-- Skill Card -->
+                <div class="bg-white shadow-lg rounded-lg p-6 group relative overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-br from-yellow-100 to-yellow-300 opacity-50 group-hover:opacity-70 transition-all duration-500"></div>
+                  <div class="relative z-10">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Database Management</h3>
+                    <p class="text-gray-600 text-sm">
+                      Manage and query databases using SQL and JPA for effective data storage.
+                    </p>
+                  </div>
+                  <img src="https://img.icons8.com/color/48/database.png" alt="Database Icon" class="absolute -top-6 -right-6 w-24 h-24 opacity-10 group-hover:opacity-30 transform rotate-45 transition duration-500">
+                </div>
+          
+                <!-- Skill Card -->
+                <div class="bg-white shadow-lg rounded-lg p-6 group relative overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-br from-teal-100 to-teal-300 opacity-50 group-hover:opacity-70 transition-all duration-500"></div>
+                  <div class="relative z-10">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Cloud Deployment</h3>
+                    <p class="text-gray-600 text-sm">
+                      Deploy your backend services to the cloud with AWS and Docker.
+                    </p>
+                  </div>
+                  <img src="https://img.icons8.com/color/48/cloud.png" alt="Cloud Icon" class="absolute -top-6 -right-6 w-24 h-24 opacity-10 group-hover:opacity-30 transform rotate-45 transition duration-500">
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="bg-gray-50 py-10">
+            <div class="max-w-6xl mx-auto px-6">
+              <!-- Section Header -->
+              <header class="text-center mb-10">
+                <h1 class="text-3xl font-extrabold text-gray-800">Backend Java Syllabus</h1>
+                <p class="text-gray-600 mt-2">
+                  Learn the essential Java modules to build powerful and scalable backend systems.
+                </p>
+              </header>
+          
+              <!-- Modules Section -->
+              <div class="space-y-8">
+                <!-- Module 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                  <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-blue-600">Module 1: Core Java</h2>
+                    <span class="text-sm text-gray-500">Basics</span>
+                  </div>
+                  <ul class="text-gray-700 space-y-2 text-sm">
+                    <li>✔️ Java Basics and JVM</li>
+                    <li>✔️ Data Structures</li>
+                    <li>✔️ OOP Principles</li>
+                    <li>✔️ Exception Handling</li>
+                    <li>✔️ Multi-threading</li>
+                  </ul>
+                </div>
+          
+                <!-- Module 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                  <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-green-600">Module 2: Java Networking</h2>
+                    <span class="text-sm text-gray-500">Intermediate</span>
+                  </div>
+                  <ul class="text-gray-700 space-y-2 text-sm">
+                    <li>✔️ Sockets and Ports</li>
+                    <li>✔️ TCP/UDP Protocols</li>
+                    <li>✔️ HTTP Client/Server</li>
+                    <li>✔️ REST APIs with Java</li>
+                    <li>✔️ Secure Sockets (SSL)</li>
+                  </ul>
+                </div>
+          
+                <!-- Module 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                  <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-yellow-600">Module 3: Databases</h2>
+                    <span class="text-sm text-gray-500">Advanced</span>
+                  </div>
+                  <ul class="text-gray-700 space-y-2 text-sm">
+                    <li>✔️ JDBC Basics</li>
+                    <li>✔️ Query Optimization</li>
+                    <li>✔️ Transactions and ACID</li>
+                    <li>✔️ ORM with Hibernate</li>
+                    <li>✔️ NoSQL Databases</li>
+                  </ul>
+                </div>
+          
+                <!-- Module 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                  <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-blue-600">Module 4: Spring Framework</h2>
+                    <span class="text-sm text-gray-500">Intermediate</span>
+                  </div>
+                  <ul class="text-gray-700 space-y-2 text-sm">
+                    <li>✔️ Spring Core</li>
+                    <li>✔️ Dependency Injection</li>
+                    <li>✔️ Spring MVC</li>
+                    <li>✔️ Spring Boot</li>
+                    <li>✔️ Microservices</li>
+                  </ul>
+                </div>
+          
+                <!-- Module 5 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                  <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-green-600">Module 5: Security</h2>
+                    <span class="text-sm text-gray-500">Advanced</span>
+                  </div>
+                  <ul class="text-gray-700 space-y-2 text-sm">
+                    <li>✔️ Authentication/Authorization</li>
+                    <li>✔️ Spring Security</li>
+                    <li>✔️ OAuth2</li>
+                    <li>✔️ JWT Tokens</li>
+                    <li>✔️ Secure Coding Practices</li>
+                  </ul>
+                </div>
+          
+                <!-- Module 6 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                  <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-yellow-600">Module 6: Testing</h2>
+                    <span class="text-sm text-gray-500">Expert</span>
+                  </div>
+                  <ul class="text-gray-700 space-y-2 text-sm">
+                    <li>✔️ Unit Testing with JUnit</li>
+                    <li>✔️ Integration Testing</li>
+                    <li>✔️ Mocking with Mockito</li>
+                    <li>✔️ End-to-End Testing</li>
+                    <li>✔️ CI/CD Pipelines</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+       <!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<div class="bg-gradient-to-r from-blue-50 to-gray-100 py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Section Header -->
+    <header class="text-center mb-16">
+      <h1 class="text-5xl font-extrabold text-gray-800">
+        Key Features
+      </h1>
+      <p class="text-lg text-gray-600 mt-4">
+        Transform your learning journey with features designed for your success.
+      </p>
+    </header>
+
+    <!-- Features Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <!-- Feature Card -->
+      <div class="relative bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+          <div class="bg-gradient-to-r from-blue-500 to-indigo-500 p-5 rounded-full">
+            <i class="fas fa-infinity text-white text-4xl"></i>
+          </div>
+        </div>
+        <div class="p-8 pt-16 text-center">
+          <h3 class="text-xl font-semibold text-gray-800">Lifetime Access</h3>
+          <p class="text-sm text-gray-600 mt-4">
+            Enjoy lifetime access to all resources and materials.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Card -->
+      <div class="relative bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+          <div class="bg-gradient-to-r from-green-400 to-teal-500 p-5 rounded-full">
+            <i class="fas fa-code text-white text-4xl"></i>
+          </div>
+        </div>
+        <div class="p-8 pt-16 text-center">
+          <h3 class="text-xl font-semibold text-gray-800">Realtime Code Analysis</h3>
+          <p class="text-sm text-gray-600 mt-4">
+            Get instant feedback and improve your coding efficiency.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Card -->
+      <div class="relative bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+          <div class="bg-gradient-to-r from-purple-500 to-pink-500 p-5 rounded-full">
+            <i class="fas fa-cloud text-white text-4xl"></i>
+          </div>
+        </div>
+        <div class="p-8 pt-16 text-center">
+          <h3 class="text-xl font-semibold text-gray-800">CloudLabs</h3>
+          <p class="text-sm text-gray-600 mt-4">
+            Practice in a secure, virtual environment anytime.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Card -->
+      <div class="relative bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+          <div class="bg-gradient-to-r from-red-500 to-orange-500 p-5 rounded-full">
+            <i class="fas fa-headset text-white text-4xl"></i>
+          </div>
+        </div>
+        <div class="p-8 pt-16 text-center">
+          <h3 class="text-xl font-semibold text-gray-800">24x7 Support</h3>
+          <p class="text-sm text-gray-600 mt-4">
+            Access expert assistance at any time of the day.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Card -->
+      <div class="relative bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+          <div class="bg-gradient-to-r from-yellow-400 to-amber-500 p-5 rounded-full">
+            <i class="fas fa-money-bill-wave text-white text-4xl"></i>
+          </div>
+        </div>
+        <div class="p-8 pt-16 text-center">
+          <h3 class="text-xl font-semibold text-gray-800">Money Back Guarantee</h3>
+          <p class="text-sm text-gray-600 mt-4">
+            If you're not satisfied, get a full refund—no questions asked.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Card -->
+      <div class="relative bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+          <div class="bg-gradient-to-r from-indigo-500 to-blue-500 p-5 rounded-full">
+            <i class="fas fa-tasks text-white text-4xl"></i>
+          </div>
+        </div>
+        <div class="p-8 pt-16 text-center">
+          <h3 class="text-xl font-semibold text-gray-800">Project Feedback</h3>
+          <p class="text-sm text-gray-600 mt-4">
+            Get expert reviews to improve your project outcomes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-gradient-to-r from-white to-gray-100 py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Section Header -->
+    <header class="text-center mb-12">
+      <h1 class="text-4xl font-semibold text-gray-800 tracking-tight">
+        Certification of Excellence
+      </h1>
+      <p class="text-gray-500 mt-4">
+        Earn your certificate upon completing the course and validate your skills with an industry-recognized credential.
+      </p>
+    </header>
+
+    <!-- Certification Content -->
+    <div class="flex flex-col lg:flex-row items-center gap-16">
+      <!-- Text Content -->
+      <div class="lg:w-1/2 text-center lg:text-left">
+        <h2 class="text-2xl font-semibold text-gray-800">
+          Recognized Industry Certification
+        </h2>
+        <p class="text-gray-600 mt-6">
+          This certificate will validate your expertise in front-end development, and it is an essential asset for enhancing your professional portfolio and resume.
+        </p>
+        <ul class="mt-6 text-gray-600 space-y-3">
+          <li class="flex items-center gap-2">
+            <span class="text-blue-500">✔</span> Mastery in HTML, CSS, JavaScript, and React.
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-blue-500">✔</span> Endorsed by industry professionals.
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-blue-500">✔</span> Elevate your resume and LinkedIn presence.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Certificate Image -->
+      <div class="lg:w-1/2 flex justify-center">
+        <img src="./images/certificate.webp" alt="Certificate Preview" class="w-full max-w-sm rounded-xl shadow-md transform transition duration-300 hover:scale-105">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-gradient-to-r from-gray-100 via-blue-50 to-purple-50 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Section Header -->
+    <header class="text-center mb-12">
+      <h1 class="text-3xl font-semibold text-gray-800">Why Learn Backend Development with Java?</h1>
+      <p class="text-gray-600 mt-3 text-lg max-w-3xl mx-auto">
+        Java is one of the most widely used backend programming languages. It offers scalability, reliability, and performance for building high-performance web applications. Here's why mastering Java backend development is essential.
+      </p>
+    </header>
+
+    <!-- Features Section -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Feature 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-300 ease-in-out text-center">
+        <div class="text-blue-500 mb-4">
+          <i class="fas fa-cogs text-4xl"></i>
+        </div>
+        <h3 class="text-xl font-medium text-gray-800 mb-2">Scalability</h3>
+        <p class="text-gray-500 text-sm">
+          Java is known for its ability to handle large-scale systems and applications, providing the stability and flexibility needed for complex backend systems.
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-300 ease-in-out text-center">
+        <div class="text-green-500 mb-4">
+          <i class="fas fa-database text-4xl"></i>
+        </div>
+        <h3 class="text-xl font-medium text-gray-800 mb-2">Database Integration</h3>
+        <p class="text-gray-500 text-sm">
+          Java seamlessly integrates with databases like MySQL, PostgreSQL, and MongoDB, making it a powerful tool for creating data-driven applications.
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-300 ease-in-out text-center">
+        <div class="text-purple-500 mb-4">
+          <i class="fas fa-cloud text-4xl"></i>
+        </div>
+        <h3 class="text-xl font-medium text-gray-800 mb-2">Cloud Support</h3>
+        <p class="text-gray-500 text-sm">
+          Java is widely used in cloud development, providing excellent support for cloud platforms like AWS, Google Cloud, and Microsoft Azure.
+        </p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-300 ease-in-out text-center">
+        <div class="text-red-500 mb-4">
+          <i class="fas fa-lock text-4xl"></i>
+        </div>
+        <h3 class="text-xl font-medium text-gray-800 mb-2">Security</h3>
+        <p class="text-gray-500 text-sm">
+          Java provides strong security features that help protect web applications, making it ideal for enterprise-level applications where data protection is critical.
+        </p>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-300 ease-in-out text-center">
+        <div class="text-yellow-500 mb-4">
+          <i class="fas fa-sync-alt text-4xl"></i>
+        </div>
+        <h3 class="text-xl font-medium text-gray-800 mb-2">Performance</h3>
+        <p class="text-gray-500 text-sm">
+          With its multi-threading and optimized garbage collection, Java ensures high performance even for complex backend processes.
+        </p>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-300 ease-in-out text-center">
+        <div class="text-teal-500 mb-4">
+          <i class="fas fa-cogs text-4xl"></i>
+        </div>
+        <h3 class="text-xl font-medium text-gray-800 mb-2">Frameworks & Libraries</h3>
+        <p class="text-gray-500 text-sm">
+          Java offers robust frameworks like Spring, Hibernate, and Java EE, enabling rapid development of enterprise-level applications.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="flex gap-10 justify-between bg-[#172337] p-5 text-white" >
+    <div>
+      <h1 style="color: #359D21;"class="text-2xl font-bold">Vetri IT System</h1>
+      <a class="mt-5">+91-8438558527</a><br>
+      <a>abc@gmail.com</a>
+    </div>
+    <div>
+      <h1 style="color: #359D21;" class="text-2xl font-bold">services</h1>
+      <a class="mt-5">web development</a><br>
+      <a>frontend developer</a><br>
+      <a>Backend Developer(python)</a><br>
+      <a>Backend Developer(Node.js)</a><br>
+      <a>Backend Developer(Java)</a><br>
+      <a>MERN Stack Developer</a>
+    </div>
+    <div>
+      <h1 style="color: #359D21;" class="text-2xl font-bold">Support</h1>
+      <a class="mt-10">Contact</a><br>
+      <a>Privacy Policy</a><br>
+      <a>Terms & Conditions</a>
+    </div>
+    <div>
+      <h1  style="color: #359D21;" class="text-2xl font-bold">Get in Touch</h1>
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <i class="fa-brands fa-instagram text-2xl ml-5"></i>
+        <i class="fa-brands fa-facebook text-2xl ml-5"></i>
+    </div>
+  </div>
+</footer>  
+
+          
+            
+
+
+        <script src="script.js"></script>
+</body>
+</html>

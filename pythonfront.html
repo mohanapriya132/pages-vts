@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+    
+</head>
+<body>
+    <nav class="flex items-center text-center justify-between p-1 m-1 sticky top-0 z-30 bg-white w-full pl-10 pr-10">
+        <div>
+           <a href="index.html"> <img src="images/logo.jpg" alt="logo" class="w-50 h-20"></a>
+        </div>
+        <div class=" navbar flex gap-10 items-center text-center  text-gray-600 font-medium">
+            <!-- <a href="#"><i class="fa-solid fa-house-chimney"></i>HOME</a> -->
+            <a href="#"><i class="fa-solid fa-circle-question"></i>VTS PROCESS</a>
+                  <!-- OUR PROJECTS with Multi-Level Dropdown -->
+          <div class="relative">
+            <a href="#" onclick="toggleDropdown('projectDropdown')" class="flex items-center gap-2">
+              <i class="fa-solid fa-list-check"></i> OUR TRAININGS
+            </a>
+            
+            <!-- First Level Dropdown for "OUR PROJECTS" -->
+            <div id="projectDropdown" class="hidden absolute bg-white text-gray-600 mt-2 p-2 rounded shadow-lg w-[20rem]">
+              <a href="frontend.html" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">Frontend Developer</a>
+              <a href="Backendpython.html" onclick="toggleDropdown('digitalServiceDropdown')" class="block px-4 py-2 hover:bg-gray-100">Backend Developer(python)</a>
+              <a href="#" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">Backend Developer(Node.js)</a>
+              <a href="#" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">Backend Developer(Java)</a>
+              <a href="#" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">MERN Stack Developer</a>
+            </div>
+          </div> 
+             <a href="#"><i class="fa-solid fa-people-group"></i>CAREERS</a>
+           
+        <div>
+            <button class=" bg-yellow-400 p-2 m-2 pl-4 pr-4 rounded-sm"><i class="fa-solid fa-phone"></i>+91-8438558527</button>
+        </div>
+       </nav>
+       <div class="relative">
+        <img src="./images/pythonbanner.jpg" alt="banner" class="w-full" style="height: 28rem;">
+        </div>
+          
+      
+        <div class="bg-gradient-to-r from-orange-400 to-yellow-500 py-20 mt-10 p">
+            <div class="max-w-7xl mx-auto px-6">
+              <!-- Full Banner Section -->
+              <div class="flex flex-col lg:flex-row items-center gap-10">
+                
+                <!-- Left Side Content -->
+                <div class="lg:w-1/2 text-center lg:text-left text-white">
+                  <h1 class="text-4xl font-bold mb-4 leading-tight">
+                    Discover the Power of Frontend Development
+                  </h1>
+                  <p class="text-lg mb-6">
+                    Frontend development is at the core of building interactive, dynamic, and visually stunning web applications. Mastering it will give you the tools to create impactful user experiences.
+                  </p>
+                  
+                  <!-- Call to Action -->
+                  <a href="Backendpython.html" class="bg-white text-orange-500 hover:bg-orange-600 hover:text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
+                    Start Learning Now
+                  </a>
+                </div>
+                
+                <!-- Right Side Image -->
+                <div class="lg:w-1/2">
+                  <!-- <img src="./images/frontend-banner.webp" alt="Frontend Development Banner" class="w-full rounded-lg shadow-lg"> -->
+                </div>
+                
+              </div>
+              
+              <!-- Additional Content Section -->
+              <div class="mt-16 text-center text-white">
+                <h2 class="text-3xl font-semibold mb-6">
+                  Why is Frontend Development Important?
+                </h2>
+                <p class="text-lg max-w-2xl mx-auto mb-8">
+                  As businesses move towards digital transformation, frontend developers are in high demand. Mastery in HTML, CSS, JavaScript, and frameworks like React will allow you to build engaging and user-centric websites that leave a lasting impact.
+                </p>
+                
+                <!-- Quick Stats or Benefits -->
+                <div class="flex justify-center gap-10">
+                  <div class="bg-white text-orange-500 p-6 rounded-lg shadow-lg w-48">
+                    <h3 class="text-2xl font-bold mb-2">High Demand</h3>
+                    <p class="text-sm">Frontend developers are among the most sought-after professionals in tech.</p>
+                  </div>
+                  <div class="bg-white text-orange-500 p-6 rounded-lg shadow-lg w-48">
+                    <h3 class="text-2xl font-bold mb-2">Creative Expression</h3>
+                    <p class="text-sm">Design beautiful websites that captivate users and provide an outstanding experience.</p>
+                  </div>
+                  <div class="bg-white text-orange-500 p-6 rounded-lg shadow-lg w-48">
+                    <h3 class="text-2xl font-bold mb-2">Lucrative Career</h3>
+                    <p class="text-sm">A rewarding career with opportunities to work with top companies around the world.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+
+
+
+
+       <script src="script.js"></script>
+      
+</body>
+</html>

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+    
+</head>
+<body>
+    <nav class="flex items-center text-center justify-between p-1 m-1 sticky top-0 z-30 bg-white w-full pl-10 pr-10">
+        <div>
+           <a href="index.html"> <img src="images/logo.jpg" alt="logo" class="w-50 h-20"></a>
+        </div>
+        <div class=" navbar flex gap-10 items-center text-center  text-gray-600 font-medium">
+            <!-- <a href="#"><i class="fa-solid fa-house-chimney"></i>HOME</a> -->
+            <a href="#"><i class="fa-solid fa-circle-question"></i>VTS PROCESS</a>
+                  <!-- OUR PROJECTS with Multi-Level Dropdown -->
+                  <div class="relative">
+                    <a href="#" onclick="toggleDropdown('projectDropdown')" class="flex items-center gap-2">
+                      <i class="fa-solid fa-list-check"></i> OUR TRAININGS
+                    </a>
+                    
+                    <!-- First Level Dropdown for "OUR PROJECTS" -->
+                    <div id="projectDropdown" class="hidden absolute bg-white text-gray-600 mt-2 p-2 rounded shadow-lg w-[20rem]">
+                      <a href="frontendfront.html" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">Frontend Developer</a>
+                      <a href="#" onclick="toggleDropdown('digitalServiceDropdown')" class="block px-4 py-2 hover:bg-gray-100">Backend Developer(python)</a>
+                      <a href="#" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">Backend Developer(Node.js)</a>
+                      <a href="#" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">Backend Developer(Java)</a>
+                      <a href="#" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">MERN Stack Developer</a>
+                    </div>
+                  </div> 
+             <a href="#"><i class="fa-solid fa-people-group"></i>CAREERS</a>
+           
+        <div>
+            <button class=" bg-yellow-400 p-2 m-2 pl-4 pr-4 rounded-sm"><i class="fa-solid fa-phone"></i>+91-8438558527</button>
+        </div>
+       </nav>
+
+       <div class="relative">
+        <img src="images/front-end.jpg" alt="banner" class="w-full" style="height: 26rem;">
+        </div>
+
+        <nav class="bg-white border-b border-gray-200 shadow-md  sticky top-20 z-20">
+            <div class="container mx-auto px-6 py-3 flex flex-col md:flex-row justify-center items-center">
+              <!-- Navbar Links -->
+              <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+                <a href="#about" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300 hover:scale-105">
+                  About
+                </a>
+                <a href="#skills" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300 hover:scale-105">
+                  Skill You Learn
+                </a>
+                <a href="#modules" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300 hover:scale-105">
+                  Technical Modules
+                </a>
+                <a href="#features" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300 hover:scale-105">
+                  Key Features
+                </a>
+                <a href="#certification" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300 hover:scale-105">
+                  Certification
+                </a>
+              </div>
+            </div>
+          </nav>
+
+          <div class="bg-gradient-to-r from-indigo-600 via-blue-500 to-teal-400 py-12" id="about">
+            <div class="max-w-6xl mx-auto px-6">
+              <!-- Main Container -->
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Content Section -->
+                <div class="space-y-6">
+                  <h1 class="text-4xl font-extrabold text-white mb-4 animate__animated animate__fadeIn animate__delay-1s">
+                    Backend Development with Python
+                  </h1>
+                  <h2 class="text-2xl font-semibold text-blue-200 mb-6 animate__animated animate__fadeIn animate__delay-1s">
+                    Course Overview
+                  </h2>
+                  <p class="text-white leading-relaxed mb-4 animate__animated animate__fadeIn animate__delay-1s">
+                    Python is one of the most popular programming languages for backend development due to its simplicity, 
+                    readability, and powerful frameworks. This comprehensive course will teach you how to use Python for 
+                    backend development, covering popular frameworks like **Django** and **Flask**, database integration, API 
+                    development, and much more.
+                  </p>
+                  <p class="text-white leading-relaxed mb-4 animate__animated animate__fadeIn animate__delay-1s">
+                    Through practical exercises and real-world projects, you'll master backend technologies like **Django ORM**, 
+                    **Flask**, **PostgreSQL**, and **MongoDB**. By the end of this course, you will be able to develop robust, 
+                    secure, and scalable backend systems, APIs, and web applications.
+                  </p>
+                  <p class="text-white leading-relaxed animate__animated animate__fadeIn animate__delay-1s">
+                    Get hands-on experience by building real-time applications, learning about data modeling, authentication, 
+                    and RESTful API design. You will also learn about deployment strategies, Docker, and cloud platforms like 
+                    **AWS** and **Heroku**.
+                  </p>
+                </div>
+                
+                <!-- Skills Section -->
+                <div class="bg-white shadow-lg rounded-lg p-6 space-y-6 transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                  <h2 class="text-2xl font-semibold text-gray-800">Skills You Will Learn</h2>
+                  <ul class="space-y-4">
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-blue-500 rounded-full mr-3"></span> Python Programming (Advanced concepts)
+                    </li>
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-blue-500 rounded-full mr-3"></span> Django Framework & Django REST Framework (DRF)
+                    </li>
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-blue-500 rounded-full mr-3"></span> Flask Framework (Microservices architecture)
+                    </li>
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-blue-500 rounded-full mr-3"></span> Database Design & Management (PostgreSQL, MongoDB)
+                    </li>
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-blue-500 rounded-full mr-3"></span> API Development (RESTful APIs, GraphQL)
+                    </li>
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-blue-500 rounded-full mr-3"></span> Authentication & Authorization (OAuth, JWT)
+                    </li>
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-blue-500 rounded-full mr-3"></span> Asynchronous Programming (Celery, Redis)
+                    </li>
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-blue-500 rounded-full mr-3"></span> Deployment & Hosting (AWS, Heroku, Docker)
+                    </li>
+                  </ul>
+                  
+                  <button
+                    class="mt-6 w-full bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                    Enquire Now
+                  </button>
+
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="bg-gray-50 py-12" id="skills">
+            <div class="max-w-7xl mx-auto px-6">
+              <!-- Header Section -->
+              <header class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-800">Skills You Learn</h1>
+                <p class="text-gray-600 mt-4">
+                  Master essential skills to excel in backend development with Python, building scalable, high-performance applications.
+                </p>
+              </header>
+          
+              <!-- Skills Grid Section -->
+              <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill Card 1 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 border-t-4 border-gradient-to-r from-orange-500 to-blue-500 flex flex-col items-center gap-4 hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2">
+                  <i class="fas fa-code text-4xl text-orange-500"></i>
+                  <h3 class="text-xl font-semibold text-gray-800">HTML5</h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    Learn the structure of web pages with semantic and accessible markup.
+                  </p>
+                </div>
+          
+                <!-- Skill Card 2 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 border-t-4 border-gradient-to-r from-orange-500 to-blue-500 flex flex-col items-center gap-4 hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2">
+                  <i class="fas fa-paint-brush text-4xl text-blue-500"></i>
+                  <h3 class="text-xl font-semibold text-gray-800">CSS3</h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    Style your applications with modern layouts, transitions, and animations.
+                  </p>
+                </div>
+          
+                <!-- Skill Card 3 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 border-t-4 border-gradient-to-r from-orange-500 to-blue-500 flex flex-col items-center gap-4 hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2">
+                  <i class="fas fa-laptop-code text-4xl text-orange-500"></i>
+                  <h3 class="text-xl font-semibold text-gray-800">JavaScript</h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    Add interactivity and dynamic functionality to your websites.
+                  </p>
+                </div>
+          
+                <!-- Skill Card 4 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 border-t-4 border-gradient-to-r from-orange-500 to-blue-500 flex flex-col items-center gap-4 hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2">
+                  <i class="fas fa-python text-4xl text-blue-500"></i>
+                  <h3 class="text-xl font-semibold text-gray-800">Python</h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    Master Python programming to build scalable backend systems and applications.
+                  </p>
+                </div>
+          
+                <!-- Skill Card 5 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 border-t-4 border-gradient-to-r from-orange-500 to-blue-500 flex flex-col items-center gap-4 hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2">
+                  <i class="fas fa-database text-4xl text-orange-500"></i>
+                  <h3 class="text-xl font-semibold text-gray-800">SQL</h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    Learn relational database management and SQL queries for data manipulation.
+                  </p>
+                </div>
+          
+                <!-- Skill Card 6 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 border-t-4 border-gradient-to-r from-orange-500 to-blue-500 flex flex-col items-center gap-4 hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2">
+                  <i class="fas fa-network-wired text-4xl text-blue-500"></i>
+                  <h3 class="text-xl font-semibold text-gray-800">APIs</h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    Design and build RESTful APIs for smooth communication between systems.
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+          
+    
+
+        
+
+<div class="bg-gray-50" id="modules">
+  <div class="max-w-5xl mx-auto px-6 py-12 bg-white">
+    <!-- Section Header -->
+    <header class="text-center mb-12">
+      <h1 class="text-5xl font-bold text-gray-800">Backend Python Syllabus</h1>
+      <p class="text-gray-600 mt-4 text-base">
+        Master essential backend development concepts with Python and build scalable, secure, and robust web applications.
+      </p>
+    </header>
+
+    <!-- Modules Section -->
+    <div class="space-y-6">
+      <!-- Module 1 -->
+      <div class="module border-2 rounded-lg shadow-lg bg-white overflow-hidden" style="border-image: linear-gradient(to right, orange, blue) 1;">
+        <div
+          class="flex justify-between items-center p-4 cursor-pointer bg-gray-100 hover:bg-blue-100 transition-colors"
+          onclick="toggleDropdownModule(this)"
+        >
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-code text-orange-500"></i>
+            <h3 class="text-lg font-semibold text-gray-800">Module 1: Python Fundamentals</h3>
+          </div>
+          <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+        </div>
+        <div class="dropdown-content hidden px-4 pb-4 bg-gray-50 border-t border-gray-200">
+          <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+            <li>Variables and Data Types</li>
+            <li>Control Flow Statements</li>
+            <li>Functions and Modules</li>
+            <li>Error Handling</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Module 2 -->
+      <div class="module border-2 rounded-lg shadow-lg bg-white overflow-hidden" style="border-image: linear-gradient(to right, orange, blue) 1;">
+        <div
+          class="flex justify-between items-center p-4 cursor-pointer bg-gray-100 hover:bg-blue-100 transition-colors"
+          onclick="toggleDropdownModule(this)"
+        >
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-database text-orange-500"></i>
+            <h3 class="text-lg font-semibold text-gray-800">Module 2: Database Integration</h3>
+          </div>
+          <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+        </div>
+        <div class="dropdown-content hidden px-4 pb-4 bg-gray-50 border-t border-gray-200">
+          <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+            <li>Introduction to SQL</li>
+            <li>Database Connections</li>
+            <li>ORM with SQLAlchemy</li>
+            <li>Data Migrations</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Module 3 -->
+      <div class="module border-2 rounded-lg shadow-lg bg-white overflow-hidden" style="border-image: linear-gradient(to right, orange, blue) 1;">
+        <div
+          class="flex justify-between items-center p-4 cursor-pointer bg-gray-100 hover:bg-blue-100 transition-colors"
+          onclick="toggleDropdownModule(this)"
+        >
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-network-wired text-orange-500"></i>
+            <h3 class="text-lg font-semibold text-gray-800">Module 3: RESTful APIs</h3>
+          </div>
+          <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+        </div>
+        <div class="dropdown-content hidden px-4 pb-4 bg-gray-50 border-t border-gray-200">
+          <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+            <li>Flask Framework Basics</li>
+            <li>Building RESTful APIs</li>
+            <li>API Authentication</li>
+            <li>Testing APIs</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Module 4 -->
+      <div class="module border-2 rounded-lg shadow-lg bg-white overflow-hidden" style="border-image: linear-gradient(to right, orange, blue) 1;">
+        <div
+          class="flex justify-between items-center p-4 cursor-pointer bg-gray-100 hover:bg-blue-100 transition-colors"
+          onclick="toggleDropdownModule(this)"
+        >
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-lock text-orange-500"></i>
+            <h3 class="text-lg font-semibold text-gray-800">Module 4: Security and Authentication</h3>
+          </div>
+          <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+        </div>
+        <div class="dropdown-content hidden px-4 pb-4 bg-gray-50 border-t border-gray-200">
+          <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+            <li>Introduction to Authentication</li>
+            <li>JWT and OAuth2</li>
+            <li>Encryption Basics</li>
+            <li>Securing APIs</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Module 5 -->
+      <div class="module border-2 rounded-lg shadow-lg bg-white overflow-hidden" style="border-image: linear-gradient(to right, orange, blue) 1;">
+        <div
+          class="flex justify-between items-center p-4 cursor-pointer bg-gray-100 hover:bg-blue-100 transition-colors"
+          onclick="toggleDropdownModule(this)"
+        >
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-tools text-orange-500"></i>
+            <h3 class="text-lg font-semibold text-gray-800">Module 5: Deployment</h3>
+          </div>
+          <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+        </div>
+        <div class="dropdown-content hidden px-4 pb-4 bg-gray-50 border-t border-gray-200">
+          <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+            <li>Server Setup</li>
+            <li>Docker Basics</li>
+            <li>Deploying on Heroku</li>
+            <li>Monitoring and Debugging</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Module 6 -->
+      <div class="module border-2 rounded-lg shadow-lg bg-white overflow-hidden" style="border-image: linear-gradient(to right, orange, blue) 1;">
+        <div
+          class="flex justify-between items-center p-4 cursor-pointer bg-gray-100 hover:bg-blue-100 transition-colors"
+          onclick="toggleDropdownModule(this)"
+        >
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-server text-orange-500"></i>
+            <h3 class="text-lg font-semibold text-gray-800">Module 6: Advanced Topics</h3>
+          </div>
+          <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+        </div>
+        <div class="dropdown-content hidden px-4 pb-4 bg-gray-50 border-t border-gray-200">
+          <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+            <li>Asynchronous Programming</li>
+            <li>Websockets</li>
+            <li>Message Queues</li>
+            <li>Microservices Architecture</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download Button -->
+    <div class="text-center mt-6">
+      <button
+        class="bg-orange-500 text-white font-semibold text-lg px-6 py-2 rounded-lg shadow-md hover:bg-orange-600 transition-all"
+        onclick="downloadSyllabusPDF()"
+      >
+        Download Syllabus PDF
+      </button>
+    </div>
+  </div>
+</div>  
+
+
+
+<!-- JavaScript -->
+<script>
+  // Toggle dropdown visibility for each module
+  function toggleDropdownModule(element) {
+    const content = element.nextElementSibling; // dropdown content
+    const icon = element.querySelector('i.fas'); // chevron icon
+    
+    // Toggle visibility of dropdown content
+    content.classList.toggle('hidden');
+    
+    // Toggle the chevron icon (down/up)
+    icon.classList.toggle('fa-chevron-down');
+    icon.classList.toggle('fa-chevron-up');
+  }
+
+  // Function to generate PDF for the syllabus
+  function downloadSyllabusPDF() {
+    const { jsPDF } = window.jspdf;
+
+    const doc = new jsPDF();
+    doc.text('Backend Python Syllabus', 20, 20);
+    doc.text('Module 1: Python Basics', 20, 30);
+    doc.text('Module 2: Flask Framework', 20, 40);
+    doc.text('Module 3: SQL and Databases', 20, 50);
+    doc.text('Module 4: REST APIs with Python', 20, 60);
+    doc.text('Module 5: Deployment', 20, 70);
+
+    // Generate and save the PDF
+    doc.save('backend_python_syllabus.pdf');
+  }
+</script>
+
+<!-- Include jsPDF library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+     
+
+
+<section class="py-12 bg-gray-50" id="features">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Title -->
+    <h1 class="text-3xl font-bold text-gray-800 uppercase text-center mb-12">Key Features</h1>
+
+    <div class="flex flex-col lg:flex-row items-center lg:items-start">
+      <!-- Left Circle -->
+      <div class="relative flex-shrink-0 w-48 h-48 bg-white rounded-full shadow-lg border-4 border-blue-500 flex items-center justify-center mt-10">
+        <div class="w-32 h-32 bg-blue-100 rounded-full flex items-center justify-center">
+          <p class="text-xl font-bold text-gray-700 text-center">Key<br>Features</p>
+        </div>
+      </div>
+
+      <!-- Right Content Boxes -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 ml-0 lg:ml-12 mt-8 lg:mt-0">
+        <!-- Feature 1 -->
+        <div class="flex items-center gap-4 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg shadow hover:scale-105 transition-transform">
+          <div class="w-12 h-12 bg-gradient-to-tr from-blue-500 to-blue-300 rounded-full flex items-center justify-center shadow-lg">
+            <i class="fas fa-shield-alt text-white text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-blue-700">Enhanced Security</h3>
+            <p class="text-sm text-gray-600">We prioritize data protection to ensure your safety.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="flex items-center gap-4 bg-blue-50 border-l-4 border-green-500 p-4 rounded-lg shadow hover:scale-105 transition-transform">
+          <div class="w-12 h-12 bg-gradient-to-tr from-green-500 to-green-300 rounded-full flex items-center justify-center shadow-lg">
+            <i class="fas fa-tachometer-alt text-white text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-green-700">High Performance</h3>
+            <p class="text-sm text-gray-600">Experience speed and reliability across all platforms.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="flex items-center gap-4 bg-blue-50 border-l-4 border-yellow-500 p-4 rounded-lg shadow hover:scale-105 transition-transform">
+          <div class="w-12 h-12 bg-gradient-to-tr from-yellow-500 to-yellow-300 rounded-full flex items-center justify-center shadow-lg">
+            <i class="fas fa-sync-alt text-white text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-yellow-700">Seamless Integration</h3>
+            <p class="text-sm text-gray-600">Integrate effortlessly with your existing tools.</p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="flex items-center gap-4 bg-blue-50 border-l-4 border-purple-500 p-4 rounded-lg shadow hover:scale-105 transition-transform">
+          <div class="w-12 h-12 bg-gradient-to-tr from-purple-500 to-purple-300 rounded-full flex items-center justify-center shadow-lg">
+            <i class="fas fa-cogs text-white text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-purple-700">Customizable Settings</h3>
+            <p class="text-sm text-gray-600">Adapt features to meet your specific requirements.</p>
+          </div>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="flex items-center gap-4 bg-blue-50 border-l-4 border-red-500 p-4 rounded-lg shadow hover:scale-105 transition-transform">
+          <div class="w-12 h-12 bg-gradient-to-tr from-red-500 to-red-300 rounded-full flex items-center justify-center shadow-lg">
+            <i class="fas fa-users text-white text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-red-700">User-Friendly Design</h3>
+            <p class="text-sm text-gray-600">Navigate with ease using our intuitive interface.</p>
+          </div>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="flex items-center gap-4 bg-blue-50 border-l-4 border-teal-500 p-4 rounded-lg shadow hover:scale-105 transition-transform">
+          <div class="w-12 h-12 bg-gradient-to-tr from-teal-500 to-teal-300 rounded-full flex items-center justify-center shadow-lg">
+            <i class="fas fa-star text-white text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-teal-700">Premium Quality</h3>
+            <p class="text-sm text-gray-600">Delivering excellence in every aspect of our services.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+             
+          <div class="bg-gray-50 py-12" id="certification">
+            <div class="max-w-7xl mx-auto px-6">
+              <!-- Section Header -->
+              <header class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-800">Certification</h1>
+                <p class="text-gray-600 mt-4">
+                  Earn an industry-recognized certificate upon successful completion of the course, validating your expertise and skills.
+                </p>
+              </header>
+          
+              <!-- Certification Content -->
+              <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+                <!-- Certificate Image -->
+                <div class="lg:w-1/2 flex justify-center">
+                  <img src="./images/certificate.webp" alt="Certificate Preview" class="w-full max-w-sm rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                </div>
+          
+                <!-- Text Content -->
+                <div class="lg:w-1/2 text-center lg:text-left">
+                  <h2 class="text-2xl font-semibold text-gray-800">Industry-Recognized Certification</h2>
+                  <p class="text-gray-600 mt-4">
+                    This certificate is proof of your proficiency in front-end development. It can be shared with potential employers or added to your professional portfolio. Stand out from the crowd by showcasing your dedication and skillset.
+                  </p>
+                  <ul class="mt-6 text-gray-600 space-y-4">
+                    <li class="flex items-center gap-3 text-lg">
+                      <span class="text-green-500">✔</span> Validates your skills in HTML, CSS, JavaScript, and React.
+                    </li>
+                    <li class="flex items-center gap-3 text-lg">
+                      <span class="text-green-500">✔</span> Recognized by top industry professionals.
+                    </li>
+                    <li class="flex items-center gap-3 text-lg">
+                      <span class="text-green-500">✔</span> Enhances your resume and LinkedIn profile.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-gray-50 py-16">
+            <div class="max-w-7xl mx-auto px-6">
+              <!-- Section Header -->
+              <header class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-800">Why Learn Frontend?</h1>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                  Frontend development empowers you to create interactive, dynamic, and user-friendly web applications. Here's why mastering it can transform your career and creative potential.
+                </p>
+              </header>
+          
+              <!-- Features Section -->
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="relative flex flex-col items-center text-center p-6 bg-white rounded-xl border-t-4 border-blue-500 shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                  <div class="bg-gradient-to-tr from-blue-500 to-blue-300 p-4 rounded-full shadow-lg mb-4">
+                    <img src="https://img.icons8.com/color/64/web-design.png" alt="Web Design Icon" class="w-12 h-12 transform hover:scale-110 transition-transform duration-300">
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-800">Build Interactive Designs</h3>
+                  <p class="text-gray-600 mt-2">
+                    Learn to design and develop websites that captivate users with seamless interactions and visually stunning layouts.
+                  </p>
+                </div>
+          
+                <!-- Feature 2 -->
+                <div class="relative flex flex-col items-center text-center p-6 bg-white rounded-xl border-t-4 border-purple-500 shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                  <div class="bg-gradient-to-tr from-purple-500 to-purple-300 p-4 rounded-full shadow-lg mb-4">
+                    <img src="https://img.icons8.com/color/64/web-development.png" alt="Web Development Icon" class="w-12 h-12 transform hover:scale-110 transition-transform duration-300">
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-800">High Demand in the Industry</h3>
+                  <p class="text-gray-600 mt-2">
+                    Companies need skilled frontend developers to bring their digital products to life. This skillset ensures a thriving career in tech.
+                  </p>
+                </div>
+          
+                <!-- Feature 3 -->
+                <div class="relative flex flex-col items-center text-center p-6 bg-white rounded-xl border-t-4 border-green-500 shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                  <div class="bg-gradient-to-tr from-green-500 to-green-300 p-4 rounded-full shadow-lg mb-4">
+                    <img src="https://img.icons8.com/color/64/creativity.png" alt="Creativity Icon" class="w-12 h-12 transform hover:scale-110 transition-transform duration-300">
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-800">Unleash Your Creativity</h3>
+                  <p class="text-gray-600 mt-2">
+                    Frontend development is where art meets technology. It lets you express creativity while solving real-world problems.
+                  </p>
+                </div>
+          
+                <!-- Feature 4 -->
+                <div class="relative flex flex-col items-center text-center p-6 bg-white rounded-xl border-t-4 border-yellow-500 shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                  <div class="bg-gradient-to-tr from-yellow-500 to-yellow-300 p-4 rounded-full shadow-lg mb-4">
+                    <img src="https://img.icons8.com/color/64/idea.png" alt="Idea Icon" class="w-12 h-12 transform hover:scale-110 transition-transform duration-300">
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-800">Work on Exciting Projects</h3>
+                  <p class="text-gray-600 mt-2">
+                    Collaborate with teams to build user-centric solutions and bring innovative ideas to life in the digital space.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    
+                      
+                        
+      <section>
+        <footer>
+            <div class="flex gap-10 justify-between bg-[#172337] p-5 text-white" >
+              <div>
+                <h1 style="color: #359D21;"class="text-2xl font-bold">Vetri IT System</h1>
+                <a class="mt-5">+91-8438558527</a><br>
+                <a>abc@gmail.com</a>
+              </div>
+              <div>
+                <h1 style="color: #359D21;" class="text-2xl font-bold">services</h1>
+                <a class="mt-5">web development</a><br>
+                <a>frontend developer</a><br>
+                <a>Backend Developer(python)</a><br>
+                <a>Backend Developer(Node.js)</a><br>
+                <a>Backend Developer(Java)</a><br>
+                <a>MERN Stack Developer</a>
+              </div>
+              <div>
+                <h1 style="color: #359D21;" class="text-2xl font-bold">Support</h1>
+                <a class="mt-10">Contact</a><br>
+                <a>Privacy Policy</a><br>
+                <a>Terms & Conditions</a>
+              </div>
+              <div>
+                <h1  style="color: #359D21;" class="text-2xl font-bold">Get in Touch</h1>
+                  <i class="fa-brands fa-whatsapp text-2xl"></i>
+                  <i class="fa-brands fa-instagram text-2xl ml-5"></i>
+                  <i class="fa-brands fa-facebook text-2xl ml-5"></i>
+              </div>
+            </div>
+          </footer>      
+      </section>        
+
+   <script src="script.js"></script>
+
+</body>
+</html>

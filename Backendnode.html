@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        module.exports = {
+  theme: {
+    extend: {
+      keyframes: {
+        borderSlide: {
+          '0%': { transform: 'scaleX(0)', transformOrigin: 'left' },
+          '100%': { transform: 'scaleX(1)', transformOrigin: 'left' },
+        },
+        borderSlideReverse: {
+          '0%': { transform: 'scaleX(0)', transformOrigin: 'right' },
+          '100%': { transform: 'scaleX(1)', transformOrigin: 'right' },
+        },
+      },
+      animation: {
+        borderSlide: 'borderSlide 0.5s forwards',
+        borderSlideReverse: 'borderSlideReverse 0.5s forwards',
+      },
+    },
+  },
+};
+
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+      
+    
+</head>
+<body>
+    <nav class="flex items-center text-center justify-between p-1 m-1 sticky top-0 z-30 bg-white w-full pl-10 pr-10">
+        <div>
+           <a href="index.html"> <img src="images/logo.jpg" alt="logo" class="w-50 h-20"></a>
+        </div>
+        <div class=" navbar flex gap-10 items-center text-center  text-gray-600 font-medium">
+            <!-- <a href="#"><i class="fa-solid fa-house-chimney"></i>HOME</a> -->
+            <a href="#"><i class="fa-solid fa-circle-question"></i>VTS PROCESS</a>
+                  <!-- OUR PROJECTS with Multi-Level Dropdown -->
+                  <div class="relative">
+                    <a href="#" onclick="toggleDropdown('projectDropdown')" class="flex items-center gap-2">
+                      <i class="fa-solid fa-list-check"></i> OUR TRAININGS
+                    </a>
+                    
+                    <!-- First Level Dropdown for "OUR PROJECTS" -->
+                    <div id="projectDropdown" class="hidden absolute bg-white text-gray-600 mt-2 p-2 rounded shadow-lg w-[20rem]">
+                      <a href="frontendfront.html" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">Frontend Developer</a>
+                      <a href="Backendpython.html" onclick="toggleDropdown('digitalServiceDropdown')" class="block px-4 py-2 hover:bg-gray-100">Backend Developer(python)</a>
+                      <a href="Backendnode.html" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">Backend Developer(Node.js)</a>
+                      <a href="Backendjava.html" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">Backend Developer(Java)</a>
+                      <a href="#" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">MERN Stack Developer</a>
+                    </div>
+                  </div> 
+             <a href="#"><i class="fa-solid fa-people-group"></i>CAREERS</a>
+           
+        <div>
+            <button class=" bg-yellow-400 p-2 m-2 pl-4 pr-4 rounded-sm"><i class="fa-solid fa-phone"></i>+91-8438558527</button>
+        </div>
+       </nav>
+
+       <div class="relative">
+        <img src="images/front-end.jpg" alt="banner" class="w-full" style="height: 26rem;">
+        </div>
+        <nav class="border-b border-gray-200 shadow-md z-20 sticky top-20 bg-white">
+            <div class="container mx-auto px-6 py-4 flex justify-center">
+              <!-- Navbar Links -->
+              <div class="flex space-x-10">
+                <a
+                  href="#about"
+                  class="text-gray-700 font-medium hover:text-orange-500 transition duration-300"
+                >
+                  About
+                </a>
+                <a
+                  href="#skills"
+                  class="text-gray-700 font-medium hover:text-orange-500 transition duration-300"
+                >
+                  Skill You Learn
+                </a>
+                <a
+                  href="#modules"
+                  class="text-gray-700 font-medium hover:text-orange-500 transition duration-300"
+                >
+                  Technical Modules
+                </a>
+                <a
+                  href="#features"
+                  class="text-gray-700 font-medium hover:text-orange-500 transition duration-300"
+                >
+                  Key Features
+                </a>
+                <a
+                  href="#certification"
+                  class="text-gray-700 font-medium hover:text-orange-500 transition duration-300"
+                >
+                  Certification
+                </a>
+              </div>
+            </div>
+          </nav>
+          <div class="bg-gray-100 py-10" id="about">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+              <!-- Main Container -->
+              <div class="flex flex-col lg:flex-row items-start gap-8">
+                <!-- Content Section -->
+                <div class="flex-1 bg-white shadow-md rounded-lg p-8">
+                  <h1 class="text-3xl font-extrabold text-gray-800 mb-4">Backend Development with Node.js</h1>
+                  <h2 class="text-lg font-semibold text-blue-500 mb-6">Overview</h2>
+                  <p class="text-gray-700 leading-relaxed mb-4">
+                    Learn the art of building efficient and scalable server-side applications with Node.js in our comprehensive Backend Development course in Bangalore, India. 
+                    This training provides hands-on experience with the fundamentals of Node.js and its ecosystem, enabling you to create APIs and server-side applications.
+                  </p>
+                  <p class="text-gray-700 leading-relaxed mb-4">
+                    The course covers advanced topics such as RESTful API design, Express.js framework, database integration with MongoDB, and authentication mechanisms. 
+                    You will also gain exposure to debugging, testing, and deploying backend solutions to the cloud.
+                  </p>
+                  <p class="text-gray-700 leading-relaxed">
+                    Whether you're a beginner or an experienced developer, this course offers in-depth knowledge and practical skills that prepare you for a career as a professional backend developer.
+                  </p>
+                </div>
+          
+                <!-- Skills Section -->
+                <div class="w-full lg:w-1/3 bg-blue-50 shadow-lg rounded-lg p-6">
+                  <h2 class="text-xl font-bold text-gray-800 mb-4">Skills Covered</h2>
+                  <ul class="space-y-3">
+                    <li class="flex items-center">
+                      <span class="w-3 h-3 bg-orange-500 rounded-full mr-3"></span> Node.js
+                    </li>
+                    <li class="flex items-center">
+                      <span class="w-3 h-3 bg-orange-500 rounded-full mr-3"></span> Express.js
+                    </li>
+                    <li class="flex items-center">
+                      <span class="w-3 h-3 bg-orange-500 rounded-full mr-3"></span> RESTful APIs
+                    </li>
+                    <li class="flex items-center">
+                      <span class="w-3 h-3 bg-orange-500 rounded-full mr-3"></span> MongoDB
+                    </li>
+                    <li class="flex items-center">
+                      <span class="w-3 h-3 bg-orange-500 rounded-full mr-3"></span> Authentication & Security
+                    </li>
+                    <li class="flex items-center">
+                      <span class="w-3 h-3 bg-orange-500 rounded-full mr-3"></span> Debugging & Testing
+                    </li>
+                    <li class="flex items-center">
+                      <span class="w-3 h-3 bg-orange-500 rounded-full mr-3"></span> Cloud Deployment
+                    </li>
+                  </ul>
+                  <button
+                    class="mt-6 w-full bg-orange-500 text-white text-center py-3 rounded-lg hover:bg-orange-600 transition duration-300">
+                    Enquire Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 py-10">
+            <div class="max-w-7xl mx-auto px-6">
+              <!-- Header -->
+              <header class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-gray-800">Master Node.js Skills</h1>
+                <p class="text-gray-600 mt-2">
+                  Build and deploy scalable backend applications with Node.js expertise.
+                </p>
+              </header>
+          
+              <!-- Skill Cards Row -->
+              <section class="flex flex-wrap justify-center gap-6">
+                <!-- Skill Card 1 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 w-64 flex flex-col items-center group relative transition duration-300 cursor-pointer">
+                  <div class="absolute top-0 left-0 w-full h-1 bg-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-all duration-500 ease-out"></div>
+                  <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="Node.js Icon" class="w-16 h-16 mb-4">
+                  <h3 class="text-lg font-semibold text-gray-800">Node.js Basics</h3>
+                  <p class="text-gray-600 text-sm text-center mt-2">
+                    Learn the fundamentals of Node.js for backend systems.
+                  </p>
+                </div>
+          
+                <!-- Skill Card 2 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 w-64 flex flex-col items-center group relative transition duration-300 cursor-pointer">
+                  <div class="absolute top-0 left-0 w-full h-1 bg-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-all duration-500 ease-out"></div>
+                  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="API Development Icon" class="w-16 h-16 mb-4">
+                  <h3 class="text-lg font-semibold text-gray-800">RESTful APIs</h3>
+                  <p class="text-gray-600 text-sm text-center mt-2">
+                    Design scalable APIs using Express.js.
+                  </p>
+                </div>
+          
+                <!-- Skill Card 3 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 w-64 flex flex-col items-center group relative transition duration-300 cursor-pointer">
+                  <div class="absolute top-0 left-0 w-full h-1 bg-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-all duration-500 ease-out"></div>
+                  <img src="https://cdn-icons-png.flaticon.com/512/921/921076.png" alt="Database Icon" class="w-16 h-16 mb-4">
+                  <h3 class="text-lg font-semibold text-gray-800">Database Integration</h3>
+                  <p class="text-gray-600 text-sm text-center mt-2">
+                    Master MongoDB and Mongoose for database management.
+                  </p>
+                </div>
+          
+                <!-- Skill Card 4 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 w-64 flex flex-col items-center group relative transition duration-300 cursor-pointer">
+                  <div class="absolute top-0 left-0 w-full h-1 bg-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-all duration-500 ease-out"></div>
+                  <img src="https://cdn-icons-png.flaticon.com/512/4331/4331994.png" alt="Security Icon" class="w-16 h-16 mb-4">
+                  <h3 class="text-lg font-semibold text-gray-800">Authentication</h3>
+                  <p class="text-gray-600 text-sm text-center mt-2">
+                    Implement JWT and OAuth for secure user access.
+                  </p>
+                </div>
+          
+                <!-- Skill Card 5 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 w-64 flex flex-col items-center group relative transition duration-300 cursor-pointer">
+                  <div class="absolute top-0 left-0 w-full h-1 bg-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-all duration-500 ease-out"></div>
+                  <img src="https://cdn-icons-png.flaticon.com/512/4287/4287703.png" alt="Cloud Icon" class="w-16 h-16 mb-4">
+                  <h3 class="text-lg font-semibold text-gray-800">Cloud Deployment</h3>
+                  <p class="text-gray-600 text-sm text-center mt-2">
+                    Deploy Node.js apps to AWS, Heroku, and more.
+                  </p>
+                </div>
+          
+                <!-- Skill Card 6 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 w-64 flex flex-col items-center group relative transition duration-300 cursor-pointer">
+                  <div class="absolute top-0 left-0 w-full h-1 bg-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-all duration-500 ease-out"></div>
+                  <img src="https://cdn-icons-png.flaticon.com/512/1057/1057336.png" alt="Performance Icon" class="w-16 h-16 mb-4">
+                  <h3 class="text-lg font-semibold text-gray-800">Performance Tuning</h3>
+                  <p class="text-gray-600 text-sm text-center mt-2">
+                    Optimize Node.js apps for better performance and scalability.
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+
+  <div class="bg-gray-50 py-6">
+    <div class="max-w-4xl mx-auto px-4">
+      <!-- Section Header -->
+      <header class="text-center mb-4">
+        <h1 class="text-2xl font-semibold text-gray-800">Node.js Skill Modules</h1>
+        <p class="text-gray-600 mt-2 text-sm">
+          Explore essential Node.js modules to enhance your backend development expertise.
+        </p>
+      </header>
+  
+      <!-- Node.js Modules Section -->
+      <div class="space-y-3">
+  
+        <!-- Module 1: Introduction to Node.js -->
+        <div class="group relative border border-gray-300 rounded-lg bg-white hover:border-orange-500 transition duration-300 hover:shadow-lg">
+          <div class="group-hover:bg-orange-300 p-3 cursor-pointer">
+            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-gray-900">Module 1: Introduction to Node.js</h3>
+          </div>
+          <div id="content-1" class="hidden p-3 bg-gray-50 rounded-lg transition-all duration-300">
+            <ul class="list-disc pl-5 text-gray-700 text-sm">
+              <li>What is Node.js?</li>
+              <li>Setting up Node.js environment</li>
+              <li>Node.js architecture and event-driven model</li>
+              <li>Understanding the Node.js runtime</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Module 2: Working with NPM -->
+        <div class="group relative border border-gray-300 rounded-lg bg-white hover:border-orange-500 transition duration-300 hover:shadow-lg">
+          <div class="group-hover:bg-orange-300 p-3 cursor-pointer">
+            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-gray-900">Module 2: Working with NPM</h3>
+          </div>
+          <div id="content-2" class="hidden p-3 bg-gray-50 rounded-lg transition-all duration-300">
+            <ul class="list-disc pl-5 text-gray-700 text-sm">
+              <li>Introduction to NPM (Node Package Manager)</li>
+              <li>Installing packages with NPM</li>
+              <li>Creating and managing package.json</li>
+              <li>Using scripts in NPM</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Module 3: Asynchronous Programming -->
+        <div class="group relative border border-gray-300 rounded-lg bg-white hover:border-orange-500 transition duration-300 hover:shadow-lg">
+          <div class="group-hover:bg-orange-300 p-3 cursor-pointer">
+            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-gray-900">Module 3: Asynchronous Programming</h3>
+          </div>
+          <div id="content-3" class="hidden p-3 bg-gray-50 rounded-lg transition-all duration-300">
+            <ul class="list-disc pl-5 text-gray-700 text-sm">
+              <li>Callbacks in Node.js</li>
+              <li>Promises and Async/Await</li>
+              <li>Understanding event loop and non-blocking I/O</li>
+              <li>Handling errors in asynchronous code</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Module 4: Express.js Framework -->
+        <div class="group relative border border-gray-300 rounded-lg bg-white hover:border-orange-500 transition duration-300 hover:shadow-lg">
+          <div class="group-hover:bg-orange-300 p-3 cursor-pointer">
+            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-gray-900">Module 4: Express.js Framework</h3>
+          </div>
+          <div id="content-4" class="hidden p-3 bg-gray-50 rounded-lg transition-all duration-300">
+            <ul class="list-disc pl-5 text-gray-700 text-sm">
+              <li>Setting up Express.js in Node.js</li>
+              <li>Routing and middleware in Express</li>
+              <li>Building APIs with Express</li>
+              <li>Handling HTTP requests and responses</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Module 5: Working with Databases -->
+        <div class="group relative border border-gray-300 rounded-lg bg-white hover:border-orange-500 transition duration-300 hover:shadow-lg">
+          <div class="group-hover:bg-orange-300 p-3 cursor-pointer">
+            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-gray-900">Module 5: Working with Databases</h3>
+          </div>
+          <div id="content-5" class="hidden p-3 bg-gray-50 rounded-lg transition-all duration-300">
+            <ul class="list-disc pl-5 text-gray-700 text-sm">
+              <li>Integrating MongoDB with Node.js</li>
+              <li>CRUD operations with MongoDB</li>
+              <li>Using Mongoose for schema management</li>
+              <li>Database query optimization techniques</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Module 6: Authentication & Authorization -->
+        <div class="group relative border border-gray-300 rounded-lg bg-white hover:border-orange-500 transition duration-300 hover:shadow-lg">
+          <div class="group-hover:bg-orange-300 p-3 cursor-pointer">
+            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-gray-900">Module 6: Authentication & Authorization</h3>
+          </div>
+          <div id="content-6" class="hidden p-3 bg-gray-50 rounded-lg transition-all duration-300">
+            <ul class="list-disc pl-5 text-gray-700 text-sm">
+              <li>JWT (JSON Web Token) Authentication</li>
+              <li>Session-based authentication</li>
+              <li>OAuth for third-party authentication</li>
+              <li>Securing REST APIs</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Module 7: Error Handling & Debugging -->
+        <div class="group relative border border-gray-300 rounded-lg bg-white hover:border-orange-500 transition duration-300 hover:shadow-lg">
+          <div class="group-hover:bg-orange-300 p-3 cursor-pointer">
+            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-gray-900">Module 7: Error Handling & Debugging</h3>
+          </div>
+          <div id="content-7" class="hidden p-3 bg-gray-50 rounded-lg transition-all duration-300">
+            <ul class="list-disc pl-5 text-gray-700 text-sm">
+              <li>Common types of errors in Node.js</li>
+              <li>Handling runtime errors and exceptions</li>
+              <li>Using Node.js debugging tools</li>
+              <li>Best practices for error handling</li>
+            </ul>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  <!-- JavaScript for Toggle Content -->
+  <script>
+    // Select all modules
+    const modules = document.querySelectorAll('.group');
+  
+    // Add event listeners for each module
+    modules.forEach(module => {
+      module.addEventListener('click', () => {
+        const content = module.querySelector('div[id^="content-"]');
+        // Toggle content visibility
+        if (content.classList.contains('hidden')) {
+          content.classList.remove('hidden');
+        } else {
+          content.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+
+
+<div class="bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+      <!-- Section Header -->
+      <header class="text-center mb-10">
+        <h1 class="text-4xl font-bold text-gray-800">Key Features</h1>
+      </header>
+  
+      <!-- Features Icons Row -->
+      <section class="flex justify-center items-center gap-12">
+        <!-- Feature 1 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-white shadow-lg rounded-full p-6 hover:shadow-xl hover:bg-orange-300 transition duration-300">
+            <i class="fas fa-infinity text-4xl text-gray-700"></i>
+          </div>
+          <p class="text-gray-800 font-medium mt-4">Lifetime Access</p>
+        </div>
+  
+        <!-- Feature 2 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-white shadow-lg rounded-full p-6 hover:shadow-xl hover:bg-orange-300 transition duration-300">
+            <i class="fas fa-code text-4xl text-gray-700"></i>
+          </div>
+          <p class="text-gray-800 font-medium mt-4">Realtime Code Analysis</p>
+        </div>
+  
+        <!-- Feature 3 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-white shadow-lg rounded-full p-6 hover:shadow-xl hover:bg-orange-300 transition duration-300">
+            <i class="fas fa-cloud text-4xl text-gray-700"></i>
+          </div>
+          <p class="text-gray-800 font-medium mt-4">CloudLabs</p>
+        </div>
+  
+        <!-- Feature 4 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-white shadow-lg rounded-full p-6 hover:shadow-xl hover:bg-orange-300 transition duration-300">
+            <i class="fas fa-headset text-4xl text-gray-700"></i>
+          </div>
+          <p class="text-gray-800 font-medium mt-4">24x7 Support</p>
+        </div>
+  
+        <!-- Feature 5 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-white shadow-lg rounded-full p-6 hover:shadow-xl hover:bg-orange-300 transition duration-300">
+            <i class="fas fa-money-bill-wave text-4xl text-gray-700"></i>
+          </div>
+          <p class="text-gray-800 font-medium mt-4">Money Back</p>
+        </div>
+  
+        <!-- Feature 6 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-white shadow-lg rounded-full p-6 hover:shadow-xl hover:bg-orange-300 transition duration-300">
+            <i class="fas fa-tasks text-4xl text-gray-700"></i>
+          </div>
+          <p class="text-gray-800 font-medium mt-4">Project Feedback</p>
+        </div>
+      </section>
+    </div>
+  </div>
+  
+  <div class="bg-gray-50 py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Section Header -->
+      <header class="text-center mb-10">
+        <h1 class="text-4xl font-bold text-gray-800">Certification</h1>
+        <p class="text-gray-600 mt-4">
+          Earn an industry-recognized certificate upon successful completion of the course, validating your expertise and skills.
+        </p>
+      </header>
+  
+      <!-- Certification Layout -->
+      <div class="relative bg-white shadow-xl rounded-lg p-8 flex flex-col md:flex-row items-center gap-8">
+        <!-- Background Decoration -->
+        <div class="absolute top-0 left-0 w-20 h-20 bg-orange-300 rounded-full -z-10"></div>
+        <div class="absolute bottom-0 right-0 w-32 h-32 bg-gray-300 rounded-full opacity-20 -z-10"></div>
+  
+        <!-- Certificate Image -->
+        <div class="md:w-1/2 flex justify-center">
+          <img src="./images/certificate.webp" alt="Certificate Preview" class="w-full max-w-md rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+        </div>
+  
+        <!-- Text Content -->
+        <div class="md:w-1/2 text-center md:text-left">
+          <h2 class="text-3xl font-semibold text-gray-800">Showcase Your Expertise</h2>
+          <p class="text-gray-600 mt-4 leading-relaxed">
+            This industry-recognized certificate is a testament to your dedication, expertise, and skills in web development. Use it to stand out in job applications and professional portfolios.
+          </p>
+          <ul class="mt-6 space-y-4">
+            <li class="flex items-center gap-3">
+              <span class="text-white bg-green-500 rounded-full p-2">
+                <i class="fas fa-check text-lg"></i>
+              </span>
+              <span class="text-gray-700">Proves expertise in HTML, CSS, JavaScript, and React.</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-white bg-green-500 rounded-full p-2">
+                <i class="fas fa-check text-lg"></i>
+              </span>
+              <span class="text-gray-700">Recognized and valued by top companies.</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-white bg-green-500 rounded-full p-2">
+                <i class="fas fa-check text-lg"></i>
+              </span>
+              <span class="text-gray-700">Adds value to your resume and LinkedIn profile.</span>
+            </li>
+          </ul>
+          <button class="mt-6 px-6 py-3 bg-orange-500 text-white rounded-lg shadow-lg hover:bg-orange-600 transition duration-300">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-50 py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Section Header -->
+      <header class="text-center mb-10">
+        <h1 class="text-4xl font-bold text-gray-800">Why Learn Node.js?</h1>
+        <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+          Node.js is a powerful tool for backend development, offering unmatched speed, scalability, and flexibility. Here’s why it’s essential for your career.
+        </p>
+      </header>
+  
+      <!-- Features Section -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Feature 1 -->
+        <div class="group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+          <div class="text-center">
+            <div class="text-green-500 text-4xl mb-4">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-800 group-hover:text-green-500 transition-colors duration-300">
+              High Performance
+            </h3>
+            <p class="text-gray-600 mt-2">
+              Node.js uses an event-driven, non-blocking model, ensuring fast and scalable applications.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Feature 2 -->
+        <div class="group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+          <div class="text-center">
+            <div class="text-blue-500 text-4xl mb-4">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-800 group-hover:text-blue-500 transition-colors duration-300">
+              Full-Stack Development
+            </h3>
+            <p class="text-gray-600 mt-2">
+              With Node.js, you can handle both frontend and backend development using JavaScript.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Feature 3 -->
+        <div class="group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+          <div class="text-center">
+            <div class="text-purple-500 text-4xl mb-4">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-800 group-hover:text-purple-500 transition-colors duration-300">
+              Large Community
+            </h3>
+            <p class="text-gray-600 mt-2">
+              The Node.js ecosystem has a vast community with countless libraries and support for faster development.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Feature 4 -->
+        <div class="group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+          <div class="text-center">
+            <div class="text-yellow-500 text-4xl mb-4">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-800 group-hover:text-yellow-500 transition-colors duration-300">
+              Real-Time Applications
+            </h3>
+            <p class="text-gray-600 mt-2">
+              Ideal for building real-time applications like chats, gaming platforms, and collaborative tools.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="flex gap-10 justify-between bg-[#172337] p-5 text-white" >
+      <div>
+        <h1 style="color: #359D21;"class="text-2xl font-bold">Vetri IT System</h1>
+        <a class="mt-5">+91-8438558527</a><br>
+        <a>abc@gmail.com</a>
+      </div>
+      <div>
+        <h1 style="color: #359D21;" class="text-2xl font-bold">services</h1>
+        <a class="mt-5">web development</a><br>
+        <a>frontend developer</a><br>
+        <a>Backend Developer(python)</a><br>
+        <a>Backend Developer(Node.js)</a><br>
+        <a>Backend Developer(Java)</a><br>
+        <a>MERN Stack Developer</a>
+      </div>
+      <div>
+        <h1 style="color: #359D21;" class="text-2xl font-bold">Support</h1>
+        <a class="mt-10">Contact</a><br>
+        <a>Privacy Policy</a><br>
+        <a>Terms & Conditions</a>
+      </div>
+      <div>
+        <h1  style="color: #359D21;" class="text-2xl font-bold">Get in Touch</h1>
+          <i class="fa-brands fa-whatsapp text-2xl"></i>
+          <i class="fa-brands fa-instagram text-2xl ml-5"></i>
+          <i class="fa-brands fa-facebook text-2xl ml-5"></i>
+      </div>
+    </div>
+  </footer>     
+
+          
+          
+
+        <script src="script.js"></script>
+</body>
+</html>
